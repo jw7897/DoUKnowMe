@@ -9,6 +9,10 @@ app.get("/", (req,res) =>{
 	res.render("landing");
 });
 
+app.get("/create", (req,res) =>{
+	res.render("create");
+});
+
 
 
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
