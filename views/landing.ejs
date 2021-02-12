@@ -5,26 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <link href="/css/landing.css" rel="stylesheet">
   <title>Do You Know Me?</title>
 </head>
 
 <body>
-<div>
-	
-<h1>Do You Know Me?</h1>	
-<input type="text" id="fname" name="fname">
-<br>
-<br>
-<input type="button" value="Create Quiz" id="create" class="btn">
-<br>
-<br>
-<input type="button" value="Take Quiz" id="take" class="btn">
-<br>	
-<br>
-<input type="button" value="Results" id="results" class="btn">
-	</div>
+  <div class="d-flex flex-column">
+    <h1>Do You Know Me?</h1>
+    <form>
+      <input type="text" class="form-control align-middle" id="pin" placeholder="pin" required>
+    </form>
 
+    <br>
+    <a href="/create"><input type="button" value="Create Quiz" id="create" class="btn"></a>
+    <br>
+    <a href="/take"><input type="button" value="Take Quiz" id="take" class="btn"></a>
+    <br>
+    <a href="/results"><input type="button" value="Results" id="results" class="btn"></a>
+  </div>
 </body>
 
 </html>
