@@ -31,18 +31,13 @@ div {
 
 
 
-#pin {
+#name {
   text-align: center;
   vertical-align: middle;
   width: 10em;
 }
 
-.btn:hover {
-  transition-duration: 0.4s;
-  background-color: white;
-  color: black;
-  border: 2px solid #F08202;
-}
+
 
 div form {
   text-align: center;
@@ -50,4 +45,16 @@ div form {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+img{
+	height: 5%;
+	width: 5%;
+	  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+img:hover{
+	cursor: pointer;
 }

@@ -5,18 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="/css/landing.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="/css/create.css" rel="stylesheet">
   <title>Do You Know Me?</title>
 </head>
 
 <body>
-<div>
-	
-<h1>What Is Your Name?</h1>	
-<input type="text">
-<br>
-<button type="button">-></button>
-	</div>
+  <div class="d-flex flex-column">
+     <form action="/anime" method="POST">
+    <div class="form-group">
+      <label for="name">What is your name?</label>
+      <input type="text" class="form-control" name="name" placeholder="Ex. Dragon Ball Super" autofocus>
+    </div>
+    <button type="submit" class="btn btn-primary">    <img id="nextBtn" src="../img/right-arrow-button.png">
+</button>
+  </form>
+
+    <br>
+  </div>
 </body>
 
 </html>
+<script src="js/create.js"></script>
