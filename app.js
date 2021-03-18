@@ -18,23 +18,23 @@ app.get("/create", (req,res) =>{
 	res.render("create");
 });
 
-app.post("/create", (req,res) =>{
-	res.render("landing");
-});
+app.post("/create", (req, res) => {
+  const newQuiz = {
+    name: req.body.name
+  }
 
-// router.post("/", isLoggedIn, async (req, res) => {
-//   const mewQuiz = {
-//     name: req.body.name
-//   }
+  Quiz.create(newQuiz)
+	.then((quiz) =>{
+	  console.log(quiz);
+	  res.redirect("/test")
+  })
+	.catch((err) =>{
+	  console.log(err);
+	  res.redirect("/fdsd")
+  })
+})
 
-//   try {
-//     const quiz = await Quiz.create(newQuiz)
-//     res.redirect("/landing");
-//   } catch (err) {
-//     console.log(err);
-//     res.redirect("/landing")
-//   }
-// })
+
  
 
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
