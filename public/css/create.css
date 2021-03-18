@@ -4,12 +4,12 @@ html {
   background-color: #F08202;
 }
 
-h1 {
+label {
   color: white;
 }
 
 div {
-  margin-top: 15em;
+  margin-top: 10em;
   background-color: #F08202;
   text-align: center;
   vertical-align: middle;
@@ -57,4 +57,13 @@ img{
 
 img:hover{
 	cursor: pointer;
+}
+
+input{
+	text-align: center;
+}
+
+button{
+	border: 0px;
+	background-color:  #F08202;
 }
