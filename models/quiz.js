@@ -26,6 +26,7 @@ const quizSchema = new mongoose.Schema({
   question5FA1: String,
   question5FA2: String,
   question5FA3: String,
+  pin: Number
 });
 
 
