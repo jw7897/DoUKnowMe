@@ -86,5 +86,6 @@ function counter(){
 	    document.getElementById("question5FA3input").style.display = "block"
 		document.getElementById("nextBtn").style.display = "none";
 		document.getElementById("final").style.display = "block";
+		document.getElementById("pinCreation").value = Math.floor(Math.random() * 9999) + 1000;
 	}
 };
