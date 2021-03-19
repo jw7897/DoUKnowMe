@@ -25,7 +25,32 @@ app.get("/create", (req,res) =>{
 
 app.post("/create", (req, res) => {
   const newQuiz = {
-    name: req.body.name
+    name: req.body.name,
+	question1: req.body.question1,
+	question1RA: req.body.question1RA,
+	question1FA1: req.body.question1FA1,
+	question1FA2: req.body.question1FA2,
+	question1FA3: req.body.question1FA3,
+	question2: req.body.question2,
+	question2RA: req.body.question2RA,
+	question2FA1: req.body.question2FA1,
+	question2FA2: req.body.question2FA2,
+	question2FA3: req.body.question2FA3,
+	question3: req.body.question3,
+	question3RA: req.body.question3RA,
+	question3FA1: req.body.question3FA1,
+	question3FA2: req.body.question3FA2,
+	question3FA3: req.body.question3FA3,
+	question4: req.body.question4,
+	question4RA: req.body.question4RA,
+	question4FA1: req.body.question4FA1,
+	question4FA2: req.body.question4FA2,
+	question4FA3: req.body.question4FA3,
+	question5: req.body.question5,
+	question5RA: req.body.question5RA,
+	question5FA1: req.body.question5FA1,
+	question5FA2: req.body.question5FA2,
+	question5FA3: req.body.question5FA3,
   }
 
   Quiz.create(newQuiz)
