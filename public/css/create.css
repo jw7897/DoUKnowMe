@@ -67,3 +67,7 @@ button{
 	border: 0px;
 	background-color:  #F08202;
 }
+
+.inputs{
+	display: none;
+}
