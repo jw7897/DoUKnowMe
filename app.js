@@ -3,7 +3,7 @@ const app = express();
 const config = require("./config");
 const Quiz = require("./models/quiz")
 const bodyParser = require('body-parser')
-
+const Pin = require("./models/pins")
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
