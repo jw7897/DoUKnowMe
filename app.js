@@ -50,8 +50,7 @@ app.post("/create", (req, res) => {
 	question5RA: req.body.question5RA,
 	question5FA1: req.body.question5FA1,
 	question5FA2: req.body.question5FA2,
-	question5FA3: req.body.question5FA3,
-	pin: req.body.pin
+	question5FA3: req.body.question5FA3
   }
 
   Quiz.create(newQuiz)
