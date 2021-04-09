@@ -4,7 +4,6 @@ const config = require("./config");
 const Quiz = require("./models/quiz")
 const bodyParser = require('body-parser')
 const Pin = require("./models/pins")
-
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
@@ -23,7 +22,21 @@ app.get("/create", (req,res) =>{
 	res.render("create");
 });
 
-app.post("/create", (req, res) => {
+app.post("/create", async (req, res) => {
+	try{
+  const vault = await Pin.findById("60635de557b121923bfd0a52");
+  let xpin = Math.floor(Math.random() * (10000 - 999 + 1)) + 999;
+  while(vault.codes.indexOf(xpin) >= 0){
+  xpin = Math.floor(Math.random() * (999 - 10000 + 1)) + 999;
+  }	
+	Pin.updateOne(
+   { "_id": "60635de557b121923bfd0a52"},
+   { "$push": { "codes": xpin } },
+   function (err, raw) {
+       if (err) return handleError(err);
+       console.log('The raw response from Mongo was ', raw);
+   }
+);
   const newQuiz = {
     name: req.body.name,
 	question1: req.body.question1,
@@ -50,9 +63,9 @@ app.post("/create", (req, res) => {
 	question5RA: req.body.question5RA,
 	question5FA1: req.body.question5FA1,
 	question5FA2: req.body.question5FA2,
-	question5FA3: req.body.question5FA3
+	question5FA3: req.body.question5FA3,
+	pin: xpin
   }
-
   Quiz.create(newQuiz)
 	.then((quiz) =>{
 	  console.log(quiz);
@@ -62,9 +75,8 @@ app.post("/create", (req, res) => {
 	  console.log(err);
 	  res.redirect("/fdsd")
   })
+	} catch(err) {
+		console.log(err);
+	}
 })
-
-
- 
-
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
