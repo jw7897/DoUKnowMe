@@ -1,0 +1,44 @@
+html {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #F08202;
+}
+
+h1 {
+  color: white;
+}
+
+
+h2 {
+  color: white;
+  border: solid;
+}
+h5 {
+  color: white;
+}
+div {
+  margin-top: 15em;
+  background-color: #F08202;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: #F08202;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.btn:hover {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid #F08202;
+}
