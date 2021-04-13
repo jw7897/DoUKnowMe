@@ -69,7 +69,7 @@ app.post("/create", async (req, res) => {
   Quiz.create(newQuiz)
 	.then((quiz) =>{
 	  console.log(quiz);
-	  res.render("landing")
+	  res.render("pin",{ xpin : xpin })
   })
 	.catch((err) =>{
 	  console.log(err);
@@ -79,4 +79,10 @@ app.post("/create", async (req, res) => {
 		console.log(err);
 	}
 })
+
+
+app.get("/take/:pin", async (req, res) => {
+const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
+});
+
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
