@@ -81,8 +81,10 @@ app.post("/create", async (req, res) => {
 })
 
 
-app.get("/take/:pin", async (req, res) => {
+app.get("/take", async (req, res) => {
 const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
+console.log(quiz)
+res.render("take",{quiz})
 });
 
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
