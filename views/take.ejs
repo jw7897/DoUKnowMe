@@ -1,1 +1,69 @@
-<%=quiz.pin %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="/css/take.css" rel="stylesheet">
+  <title>Do You Know Me?</title>
+</head>
+ 
+<body>
+  <div class="d-flex flex-column content">
+	  <h1>Do you know <%=quiz.name%>?</h1>
+     <form action="/create" method="POST">
+    <div class="form-group" id="nameinput">
+      <label for="name">What is your name?</label>
+      <input type="text" class="form-control" name="name" placeholder="Your Name" autofocus>
+    </div>
+		 
+	 <div class="form-group inputs" id="question1">
+      <h2><%=quiz.question1%></h2>
+	  <input type="button" value="<%=quiz.question1RA%>" id="test" class="btn">
+	  <input type="button" value="<%=quiz.question1FA1%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question1FA2%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question1FA3%>" id="" class="btn">
+    </div>
+	<div class="form-group inputs" id="question2">
+      <h2><%=quiz.question2%></h2>
+	  <input type="button" value="<%=quiz.question2RA%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question2FA1%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question2FA2%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question2FA3%>" id="" class="btn">
+    </div>
+	<div class="form-group inputs" id="question3">
+      <h2><%=quiz.question3%></h2>
+	  <input type="button" value="<%=quiz.question3RA%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question3FA1%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question3FA2%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question3FA3%>" id="" class="btn">
+    </div>
+	<div class="form-group inputs" id="question4">
+      <h2><%=quiz.question4%></h2>
+	  <input type="button" value="<%=quiz.question4RA%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question4FA1%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question4FA2%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question4FA3%>" id="" class="btn">
+    </div>
+	<div class="form-group inputs" id="question5">
+      <h2><%=quiz.question5%></h2>
+	  <input type="button" value="<%=quiz.question5RA%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question5FA1%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question5FA2%>" id="" class="btn">
+	  <input type="button" value="<%=quiz.question5FA3%>" id="" class="btn">
+    </div>
+		 
+	<img id="nextBtn" src="../img/right-arrow-button.png">
+    <button type="submit" class="inputs" id="final"><img src="../img/right-arrow-button.png"></button>
+  </form>
+
+    <br>
+  </div>
+</body>
+
+</html>
+<script src="js/take.js"></script>
+
