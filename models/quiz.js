@@ -23,6 +23,7 @@ const quizSchema = new mongoose.Schema({
   question4FA3: String,
   question5: String,
   question5A: String,
+  question5RA: String,
   question5FA1: String,
   question5FA2: String,
   question5FA3: String,
