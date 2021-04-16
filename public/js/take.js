@@ -1,5 +1,4 @@
 let count = 0;
-
 window.onload = function() {
 // document.getElementById("final").style.display = "none"
 // document.getElementById("nameinput").style.display = "block"
@@ -28,3 +27,17 @@ function counter(){
 		document.getElementById("final").style.display = "block";
 	} 
 };
+
+function select(){
+	let answBtns = document.querySelectorAll("input.answBtn")
+	for (var i = 0; i < answBtns.length; i++) {
+    var self = answBtns[i];
+    self.addEventListener('click', function (event) {  
+        // prevent browser's default action
+        event.preventDefault();
+
+        // call your awesome function here
+        self.style.color = "blue";
+    }, false);
+}
+}
