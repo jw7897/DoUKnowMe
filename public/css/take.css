@@ -84,3 +84,7 @@ input[type=button]:focus {
   color: black;
   border: 2px solid #F08202;  
 }
+
+.question1answ{
+	display: none;
+}
