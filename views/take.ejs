@@ -17,49 +17,88 @@
      <form action="/create" method="POST">
     <div class="form-group" id="nameinput">
       <label for="name">What is your name?</label>
-      <input type="text" class="form-control" name="name" placeholder="Your Name" autofocus>
+      <input type="text" class="form-control" name="name" placeholder="Your Name" autofocus id="nameinput">
     </div>
 		 
 	 <div class="form-group inputs" id="question1">
       <h2><%=quiz.question1%></h2>
-	  <input type="button" value="<%=quiz.question1RA%>" id="question1RA">
-	  <input type="button" value="<%=quiz.question1FA1%>"  id="question1FA1">
-	  <input type="button" value="<%=quiz.question1FA2%>"  id="question1FA2">
-	  <input type="button" value="<%=quiz.question1FA3%>"  id="question1FA3">
+	  <input type="radio" name="q1answBtns" id="question1RAinpt" value="<%=quiz.question1RA%>">
+      <label for="question1RA" id="question1RA"><%=quiz.question1RA%></label><br>
+		 
+	  <input type="radio" name="q1answBtns" id="question1FA1inpt" value="<%=quiz.question1FA1%>">
+      <label for="question1FA1" id="question1FA1"><%=quiz.question1FA1%></label><br>
+		 
+	<input type="radio" name="q1answBtns" id="question1FA2inpt" value="<%=quiz.question1FA2%>">
+      <label for="question1FA2" id="question1FA2"><%=quiz.question1FA2%></label><br>
+		 
+		 <input type="radio" name="q1answBtns" id="question1FA3inpt" value="<%=quiz.question1FA3%>">
+      <label for="question1FA3" id="question1FA3"><%=quiz.question1FA3%></label><br>
+
     </div>
 	<div class="form-group inputs" id="question2">
       <h2><%=quiz.question2%></h2>
-	  <input type="button" value="<%=quiz.question2RA%>"  id="question2RA">
-	  <input type="button" value="<%=quiz.question2FA1%>"  id="question2FA1">
-	  <input type="button" value="<%=quiz.question2FA2%>"  id="question2FA2">
-	  <input type="button" value="<%=quiz.question2FA3%>"  id="question2FA3">
+	    <input type="radio" name="q2answBtns" id="question2RAinpt" value="<%=quiz.question2RA%>">
+      <label for="question2RA" id="question2RA"><%=quiz.question2RA%></label><br>
+		 
+	  <input type="radio" name="q2answBtns" id="question2FA1inpt" value="<%=quiz.question2FA1%>">
+      <label for="question2FA1" id="question2FA1"><%=quiz.question2FA1%></label><br>
+		 
+	<input type="radio" name="q2answBtns" id="question2FA2inpt" value="<%=quiz.question2FA2%>">
+      <label for="question2FA2" id="question2FA2"><%=quiz.question2FA2%></label><br>
+		 
+		 <input type="radio" name="q2answBtns" id="question2FA3inpt" value="<%=quiz.question2FA3%>">
+      <label for="question2FA3" id="question2FA3"><%=quiz.question2FA3%></label><br>
+
     </div>
 	<div class="form-group inputs" id="question3">
       <h2><%=quiz.question3%></h2>
-	  <input type="button" value="<%=quiz.question3RA%>"  id="question3RA">
-	  <input type="button" value="<%=quiz.question3FA1%>"  id="question3FA1">
-	  <input type="button" value="<%=quiz.question3FA2%>"  id="question3FA2">
-	  <input type="button" value="<%=quiz.question3FA3%>"  id="question3FA3">
+	    <input type="radio" name="q3answBtns" id="question3RAinpt" value="<%=quiz.question3RA%>">
+      <label for="question3RA" id="question3RA"><%=quiz.question3RA%></label><br>
+		 
+	  <input type="radio" name="q3answBtns" id="question3FA1inpt" value="<%=quiz.question3FA1%>">
+      <label for="question3FA1" id="question3FA1"><%=quiz.question3FA1%></label><br>
+		 
+	<input type="radio" name="q3answBtns" id="question3FA2inpt" value="<%=quiz.question3FA2%>">
+      <label for="question3FA2" id="question3FA2"><%=quiz.question3FA2%></label><br>
+		 
+		 <input type="radio" name="q3answBtns" id="question3FA3inpt" value="<%=quiz.question3FA3%>">
+      <label for="question3FA3" id="question3FA3"><%=quiz.question3FA3%></label><br>
+
     </div>
 	<div class="form-group inputs" id="question4">
       <h2><%=quiz.question4%></h2>
-	  <input type="button" value="<%=quiz.question4RA%>"  id="question4RA">
-	  <input type="button" value="<%=quiz.question4FA1%>"  id="question4FA1">
-	  <input type="button" value="<%=quiz.question4FA2%>"  id="question4FA2">
-	  <input type="button" value="<%=quiz.question4FA3%>"  id="question4FA3">
+	  <input type="radio" name="q4answBtns" id="question4RAinpt" value="<%=quiz.question4RA%>">
+      <label for="question4RA" id="question4RA"><%=quiz.question4RA%></label><br>
+		 
+	  <input type="radio" name="q4answBtns" id="question4FA1inpt" value="<%=quiz.question4FA1%>">
+      <label for="question4FA1" id="question4FA1"><%=quiz.question4FA1%></label><br>
+		 
+	<input type="radio" name="q4answBtns" id="question4FA2inpt" value="<%=quiz.question4FA2%>">
+      <label for="question4FA2" id="question4FA2"><%=quiz.question4FA2%></label><br>
+		 
+		 <input type="radio" name="q4answBtns" id="question4FA3inpt" value="<%=quiz.question4FA3%>">
+      <label for="question4FA3" id="question4FA3"><%=quiz.question4FA3%></label><br>
+
     </div>
 	<div class="form-group inputs" id="question5">
       <h2><%=quiz.question5%></h2>
-	  <input type="button" value="<%=quiz.question5RA%>"  id="question5RA">
-	  <input type="button" value="<%=quiz.question5FA1%>"  id="question5FA1">
-	  <input type="button" value="<%=quiz.question5FA2%>"  id="question5FA2">
-	  <input type="button" value="<%=quiz.question5FA3%>"  id="question5FA3">
+	  <input type="radio" name="q5answBtns" id="question5RAinpt" value="<%=quiz.question5RA%>">
+      <label for="question5RA" id="question5RA"><%=quiz.question5RA%></label><br>
+		 
+	  <input type="radio" name="q5answBtns" id="question5FA1inpt" value="<%=quiz.question5FA1%>">
+      <label for="question5FA1" id="question5FA1"><%=quiz.question5FA1%></label><br>
+		 
+	<input type="radio" name="q5answBtns" id="question5FA2inpt" value="<%=quiz.question5FA2%>">
+      <label for="question5FA2" id="question5FA2"><%=quiz.question5FA2%></label><br>
+		 
+		 <input type="radio" name="q5answBtns"  id="question5FA3inpt" value="<%=quiz.question5FA3%>">
+      <label for="question5FA3" id="question5FA3"><%=quiz.question5FA3%></label><br>
+
     </div>
 		 
 	<img id="nextBtn" src="../img/right-arrow-button.png">
     <button type="submit" class="inputs" id="final"><img src="../img/right-arrow-button.png"></button>
   </form>
-
     <br>
   </div>
 </body>
