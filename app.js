@@ -87,4 +87,25 @@ console.log(quiz)
 res.render("take",{quiz})
 });
 
+app.post("/take", async (req, res) => {
+let score = 0;
+if(req.body.q1answBtns == "<%=quiz.question1RA%>"){
+	score += 1;
+}
+if(req.body.q2answBtns == "<%=quiz.question2RA%>"){
+	score += 1;
+}
+if(req.body.q3answBtns == "<%=quiz.question3RA%>"){
+	score += 1;
+}
+if(req.body.q4answBtns == "<%=quiz.question4RA%>"){
+	score += 1;
+}
+if(req.body.q5answBtns == "<%=quiz.question5RA%>"){
+	score += 1;
+}
+
+res.render("landing");
+});
+
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
