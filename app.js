@@ -70,12 +70,11 @@ app.post("/create", async (req, res) => {
   }
   Quiz.create(newQuiz)
 	.then((quiz) =>{
-	  console.log(quiz);
 	  res.render("pin",{ xpin : xpin })
   })
 	.catch((err) =>{
 	  console.log(err);
-	  res.redirect("/fdsd")
+	  res.redirect("/error")
   })
 	} catch(err) {
 		console.log(err);
@@ -85,7 +84,6 @@ app.post("/create", async (req, res) => {
 
 app.get("/take", async (req, res) => {
 const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
-console.log(quiz)
 res.render("take",{quiz})
 });
 
@@ -114,12 +112,11 @@ const newScore = {
 
   Score.create(newScore)
 	.then((score) =>{
-	  console.log(score);
 	  res.render("score",score)
   })
 	.catch((err) =>{
 	  console.log(err);
-	  res.redirect("/fdsd")
+	  res.redirect("/error")
   })
 });
 
