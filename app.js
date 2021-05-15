@@ -4,6 +4,8 @@ const config = require("./config");
 const Quiz = require("./models/quiz")
 const bodyParser = require('body-parser')
 const Pin = require("./models/pins")
+const Score = require("./models/score")
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
@@ -105,7 +107,20 @@ if(req.body.q5answBtns == "<%=quiz.question5RA%>"){
 	score += 1;
 }
 
-res.render("landing");
+const newScore = {
+	name: req.body.name,
+	score: score
+}
+
+  Score.create(newScore)
+	.then((score) =>{
+	  console.log(score);
+	  res.render("score",score)
+  })
+	.catch((err) =>{
+	  console.log(err);
+	  res.redirect("/fdsd")
+  })
 });
 
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
