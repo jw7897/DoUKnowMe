@@ -107,7 +107,8 @@ if(req.body.q5answBtns == "<%=quiz.question5RA%>"){
 
 const newScore = {
 	name: req.body.name,
-	score: score
+	score: score,
+	pin: req.body.getPin
 }
 
   Score.create(newScore)
@@ -119,5 +120,14 @@ const newScore = {
 	  res.redirect("/error")
   })
 });
+
+app.get("/results", async (req, res) => {
+const score = await Score.find({pin: req.params.pin}).exec();
+const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
+console.log(score);
+console.log(quiz);
+res.render("results",{score,quiz})
+});
+
 
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
