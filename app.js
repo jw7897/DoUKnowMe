@@ -82,8 +82,8 @@ app.post("/create", async (req, res) => {
 })
 
 
-app.get("/take", async (req, res) => {
-const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
+app.post("/takeInpt", async (req, res) => {
+const quiz = await Quiz.findOne({ pin: req.body.pin}).exec();
 if(quiz === null){
 	  res.render("error.ejs")
 } else {
@@ -125,9 +125,12 @@ const newScore = {
   })
 });
 
-app.get("/results", async (req, res) => {
-const score = await Score.find({pin: req.params.pin}).exec();
-const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
+app.post("/resultsInpt", async (req, res) => {
+const score = await Score.find({pin: req.body.pin}).exec();
+const quiz = await Quiz.findOne({pin: req.body.pin }).exec();
+console.log(quiz);
+	console.log(score);
+
 if(quiz === null){
 	  res.render("error.ejs")
 } else {
