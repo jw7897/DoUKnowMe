@@ -74,7 +74,7 @@ app.post("/create", async (req, res) => {
   })
 	.catch((err) =>{
 	  console.log(err);
-	  res.redirect("/error")
+	  res.render("error.ejs")
   })
 	} catch(err) {
 		console.log(err);
@@ -84,7 +84,11 @@ app.post("/create", async (req, res) => {
 
 app.get("/take", async (req, res) => {
 const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
-res.render("take",{quiz})
+if(quiz === null){
+	  res.render("error.ejs")
+} else {
+	res.render("take",{quiz})
+}
 });
 
 app.post("/take", async (req, res) => {
@@ -117,17 +121,22 @@ const newScore = {
   })
 	.catch((err) =>{
 	  console.log(err);
-	  res.redirect("/error")
+	  res.render("error.ejs")
   })
 });
 
 app.get("/results", async (req, res) => {
 const score = await Score.find({pin: req.params.pin}).exec();
 const quiz = await Quiz.findOne({ code: req.params.pin }).exec();
-console.log(score);
-console.log(quiz);
-res.render("results",{score,quiz})
+if(quiz === null){
+	  res.render("error.ejs")
+} else {
+	res.render("results",{score,quiz})
+}
 });
 
+app.get("*", (req,res) =>{
+	res.render("error");
+})
 
 app.listen(process.env.PORT || 3000, ()=>{console.log("I don't know you")});
