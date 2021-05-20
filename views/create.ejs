@@ -144,8 +144,13 @@
       <label for="question5FA3">Type the third incorrect answer</label>
       <input type="text" class="form-control" name="question5FA3" placeholder="Question 5 Incorrect Answer">
     </div>
-	<img id="nextBtn" src="../img/right-arrow-button.png">
-    <button type="submit" class="inputs" id="final"><img src="../img/right-arrow-button.png"></button>
+		<div id="btnContainer">
+		<img id="backBtn"  style="transform: scaleX(-1);" src="../img/right-arrow-button.png">	
+		<img id="nextBtn" src="../img/right-arrow-button.png">
+	 </div>
+		 
+    <input type="button" value="Submit" id="final" class="btn" onclick="this.form.submit();">
+    <a href="/"><input type="button" value="Home" class="btn"></a>
   </form>
 
     <br>
