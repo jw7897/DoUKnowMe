@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const config = require("./config");
-const Quiz = require("./models/quiz")
-const bodyParser = require('body-parser')
-const Pin = require("./models/pins")
-const Score = require("./models/score")
+const Quiz = require("./models/quiz");
+const bodyParser = require('body-parser');
+const Pin = require("./models/pins");
+const Score = require("./models/score");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -128,9 +128,6 @@ const newScore = {
 app.post("/resultsInpt", async (req, res) => {
 const score = await Score.find({pin: req.body.pin}).exec();
 const quiz = await Quiz.findOne({pin: req.body.pin }).exec();
-console.log(quiz);
-	console.log(score);
-
 if(quiz === null){
 	  res.render("error.ejs")
 } else {
