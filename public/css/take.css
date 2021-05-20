@@ -1,10 +1,10 @@
-#btnContainer{
-	display: flex;
-	margin: 0;
+#btnContainer {
+  display: flex;
+  margin: 0;
 }
 
-#backBtn{
-	visibility: hidden;
+#backBtn {
+  visibility: hidden;
 }
 
 html {
@@ -13,13 +13,14 @@ html {
   background-color: #F08202;
 }
 
-h1{
-	color: white;
+h1 {
+  color: white;
 }
 
-h2{
-	color:white
+h2 {
+  color: white
 }
+
 label {
   color: white;
 }
@@ -45,15 +46,11 @@ div {
   border: 2px solid white;
 }
 
-
-
 #name {
   text-align: center;
   vertical-align: middle;
   width: 10em;
 }
-
-
 
 div form {
   text-align: center;
@@ -63,39 +60,39 @@ div form {
   display: block;
 }
 
-img{
-	height: 5%;
-	width: 5%;
-	  margin-left: auto;
+img {
+  height: 5%;
+  width: 5%;
+  margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-img:hover{
-	cursor: pointer;
+img:hover {
+  cursor: pointer;
 }
 
-input{
-	text-align: center;
+input {
+  text-align: center;
 }
 
-button{
-	border: 0px;
-	background-color:  #F08202;
+button {
+  border: 0px;
+  background-color: #F08202;
 }
 
-.inputs{
-	display: none;
+.inputs {
+  display: none;
 }
 
-input[type=button]:focus {     
+input[type=button]:focus {
   background-color: white;
   color: black;
-  border: 2px solid #F08202;  
+  border: 2px solid #F08202;
 }
 
-.getPin{
-	display: none;
+.getPin {
+  display: none;
 }
 
 .btn:hover {
@@ -104,4 +101,3 @@ input[type=button]:focus {
   color: black;
   border: 2px solid #F08202;
 }
-
