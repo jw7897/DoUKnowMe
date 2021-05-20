@@ -1,10 +1,16 @@
 const express = require("express");
 const app = express();
-const config = require("./config");
 const Quiz = require("./models/quiz");
 const bodyParser = require('body-parser');
 const Pin = require("./models/pins");
 const Score = require("./models/score");
+
+try{
+	var config = require("./config");
+} catch (err){
+	console.log("Probably not working locally")
+	console.log(err)
+}
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -13,8 +19,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 const mongoose = require('mongoose');
-mongoose.connect(config.db.connection, {useNewUrlParser: true, useUnifiedTopology: true});
 
+try{
+	mongoose.connect(config.db.connection, {useNewUrlParser: true, useUnifiedTopology: true});
+} catch(err){
+	mongoose.connect(process.env.DB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true});
+
+}
 
 app.get("/", (req,res) =>{
 	res.render("landing");
