@@ -1,4 +1,4 @@
-html {
+body {
   text-align: center;
   vertical-align: middle;
   background-color: #F08202;
@@ -7,6 +7,12 @@ html {
 h1 {
   color: white;
 }
+
+h5 {
+  color: white;
+  margin-top: 2em;
+}
+
 
 div {
   margin-top: 15em;
