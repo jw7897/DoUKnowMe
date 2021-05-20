@@ -1,3 +1,12 @@
+#btnContainer{
+	display: flex;
+	margin: 0;
+}
+
+#backBtn{
+	visibility: hidden;
+}
+
 html {
   text-align: center;
   vertical-align: middle;
@@ -87,5 +96,12 @@ input[type=button]:focus {
 
 .getPin{
 	display: none;
+}
+
+.btn:hover {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid #F08202;
 }
 

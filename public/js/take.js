@@ -1,10 +1,16 @@
 let count = 0;
 window.onload = function() {
-  document.getElementById("nextBtn").onclick = counter;
+  document.getElementById("nextBtn").onclick = next;
 }
 
-function counter() {	
-  count = count + 1
+function next(){
+	count = count +1;
+	showContent();
+}
+
+
+function next() {	
+  count = count + 1;
   if (count === 1) {
 	let q1 = document.getElementById("q1").textContent
     let ra = document.getElementById("question1RAinpt").value
@@ -88,3 +94,4 @@ let q4 = document.getElementById("q4").textContent
     document.getElementById("final").style.display = "block";
   }
 };
+
