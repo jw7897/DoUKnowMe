@@ -5,6 +5,8 @@ window.onload = function() {
 
 function next() {
   count = count + 1;
+  
+	noenter();
   if (count === 1) {
     let q1 = document.getElementById("q1").textContent
     let ra = document.getElementById("question1RAinpt").value
@@ -88,3 +90,7 @@ function next() {
     document.getElementById("final").style.display = "block";
   }
 };
+
+function noenter() {
+  return !(window.event && window.event.keyCode == 13); 
+}

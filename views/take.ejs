@@ -17,7 +17,7 @@
     <form action="/take" method="POST">
       <div class="form-group" id="nameinput">
         <label for="name">What is your name?</label>
-        <input type="text" class="form-control" name="name" placeholder="Your Name" autofocus id="nameinput">
+        <input type="text" onkeypress="return noenter()" class="form-control" name="name" placeholder="Your Name" autofocus id="nameinput">
       </div>
 
       <div class="form-group inputs" id="question1">
@@ -98,7 +98,7 @@
 
       <div class="getPin" id="getPin">
         <label for="getPin"></label>
-        <input type="text" class="form-control" placeholder="Question 1" name="getPin" value="<%=quiz.pin%>">
+        <input type="text" onkeypress="return noenter()" class="form-control" placeholder="Question 1" name="getPin" value="<%=quiz.pin%>">
       </div>
 
       <img id="nextBtn" src="../img/right-arrow-button.png">
